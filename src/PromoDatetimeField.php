@@ -12,11 +12,11 @@ class PromoDatetimeField extends DatetimeField
         $this->dateField->setConfig("showcalendar", true);
     }
 
-    public function setValue($val)
+    public function setValue($val, $data = null)
     {
         if ($val == array('date' => '', 'time' => '')) {
             $val = null;
         }
-        parent::setValue($val);
+        parent::setValue($val,$data);
     }
 }
